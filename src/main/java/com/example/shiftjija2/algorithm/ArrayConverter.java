@@ -4,12 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ArrayConverter {
-    public static ArrayList<ArrayList<String>> convertIntArrayToStringArray(ArrayList<ArrayList<Integer>> intArray) {
+    public static ArrayList<ArrayList<String>> convertIntArrayToStringArray(ArrayList<ArrayList<?>> intArray) {
         ArrayList<ArrayList<String>> stringArray = new ArrayList<>();
 
-        for (ArrayList<Integer> innerList : intArray) {
+        for (ArrayList<?> innerList : intArray) {
             ArrayList<String> stringInnerList = new ArrayList<>();
-            for (Integer value : innerList) {
+            for (Object value : innerList) {
                 stringInnerList.add(value.toString());
             }
             stringArray.add(stringInnerList);

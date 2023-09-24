@@ -2,16 +2,24 @@ package com.example.shiftjija2.algorithm;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 
 public class Sorter {
     public static ArrayList<ArrayList<String>> sortByFirstElements(ArrayList<ArrayList<String>> arrayList) {
-        ArrayList<String>[] array = arrayList.toArray(new ArrayList[0]);
 
-        Arrays.sort(array, Comparator.comparingInt(a -> Integer.parseInt(a.get(0))));
+        Comparator<ArrayList<String>> comparator = new Comparator<ArrayList<String>>() {
+            @Override
+            public int compare(ArrayList<String> list1, ArrayList<String> list2) {
+                if (!list1.isEmpty() && !list2.isEmpty()) {
+                    return list1.get(0).compareTo(list2.get(0));
+                }
+                return 0;
+            }
+        };
 
-        ArrayList<ArrayList<String>> sortedArrayList = new ArrayList<>(Arrays.asList(array));
+        Collections.sort(arrayList, comparator);
 
-        return sortedArrayList;
+        return arrayList;
     }
 }
