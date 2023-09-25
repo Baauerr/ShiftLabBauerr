@@ -6,15 +6,15 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "INTERVALS_STRING")
+@Table(name = "intervals_string")
 public class TableIntervalsString {
     @jakarta.persistence.Id
     @GeneratedValue
-    @Column(name = "id", nullable = false)
+    @Column(name = "ID", nullable = false)
     private Long Id;
-    @Column(name = "start", nullable = false)
+    @Column(name = "START", nullable = false)
     private String start;
-    @Column(name = "`end`", nullable = false)
+    @Column(name = "ENDVALUE", nullable = false)
     private String end;
 
     public TableIntervalsString() {

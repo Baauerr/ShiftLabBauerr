@@ -3,15 +3,15 @@ package com.example.shiftjija2.H2DB;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "INTERVALS_INT")
+@Table(name = "intervals_int")
 public class TableIntervalsInt {
     @jakarta.persistence.Id
     @GeneratedValue
-    @Column(name = "id", nullable = false)
+    @Column(name = "ID", nullable = false)
     private Long Id;
-    @Column(name = "start", nullable = false)
+    @Column(name = "START", nullable = false)
     private Integer start;
-    @Column(name = "`end`", nullable = false)
+    @Column(name = "ENDVALUE", nullable = false)
     private Integer end;
 
     public TableIntervalsInt(){
