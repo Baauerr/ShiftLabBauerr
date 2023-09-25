@@ -2,7 +2,7 @@ package com.example.shiftjija2.algorithm;
 
 
 
-import com.example.shiftjija2.H2DB.IntervalsInt;
+import com.example.shiftjija2.H2DB.TableIntervalsInt;
 import com.example.shiftjija2.H2DB.IntervalsIntRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,7 +24,7 @@ public class IntervalsIntService {
             Integer startValue = intervalValues.get(0);
             Integer endValue = intervalValues.get(1);
 
-            IntervalsInt intervals = new IntervalsInt();
+            TableIntervalsInt intervals = new TableIntervalsInt();
             intervals.setStart(startValue);
             intervals.setEnd(endValue);
 

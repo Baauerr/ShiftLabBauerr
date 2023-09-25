@@ -5,5 +5,5 @@ import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface IntervalsIntRepository extends CrudRepository<IntervalsInt, Long> {
+public interface IntervalsIntRepository extends CrudRepository<TableIntervalsInt, Long> {
 }

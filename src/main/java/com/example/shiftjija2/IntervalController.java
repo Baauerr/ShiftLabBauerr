@@ -10,6 +10,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import static com.example.shiftjija2.algorithm.ArrayConverter.convertToIntegerArrays;
+import static com.example.shiftjija2.algorithm.ArrayConverter.convertToStringArrays;
+
 @SpringBootApplication
 @RestController
 @RequestMapping("/api/v1/intervals")
@@ -21,23 +24,29 @@ public class IntervalController {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-        @GetMapping(value = "/min")
-    public ResponseEntity<ArrayList<String>> getMinInterval(@RequestParam(name = "kind") String kind) {
-        String sql = "SELECT MIN(CASE WHEN ? = 'digits' THEN CAST(start AS SIGNED) ELSE start END) AS min_start, " +
-                "MIN(CASE WHEN ? = 'letters' THEN end ELSE CAST(end AS SIGNED) END) AS min_end " +
-                "FROM INTERVALS";
-        Map<String, String> result = jdbcTemplate.queryForObject(sql, new Object[]{kind, kind}, (rs, rowNum) -> {
-            Map<String, String> response = new HashMap<>();
-            response.put("minStart", rs.getString("min_start"));
-            response.put("minEnd", rs.getString("min_end"));
-            return response;
-        });
-        return ResponseEntity.ok((ArrayList<String>) result);
+    @GetMapping("/min")
+    public ResponseEntity<IntervalResult> getMinStartAndEnd(@RequestParam("kind") String kind) {
+        if ("digits".equals(kind)) {
+            String sql = "SELECT MIN(`start`) , MIN(`end`) FROM INTERVALS_INT";
+            IntervalResult result = jdbcTemplate.queryForObject(sql, (rs, rowNum) -> {
+                IntervalResult intervalResult = new IntervalResult();
+                intervalResult.setStart(rs.getInt("min_start"));
+                intervalResult.setEnd(rs.getInt("min_end"));
+                return intervalResult;
+            });
+            return ResponseEntity.ok(result);
+        }
+        else if ("letters".equals(kind)){
+            String sql = "SELECT MIN(`start`), MIN(`end`) FROM INTERVALS_STRING";
+            IntervalResult result = jdbcTemplate.queryForObject(sql, (rs, rowNum) -> {
+                IntervalResult intervalResult = new IntervalResult();
+                intervalResult.setStart(rs.getInt("min_start"));
+                intervalResult.setEnd(rs.getInt("min_end"));
+                return intervalResult;
+            });
+            return ResponseEntity.ok(result);
+        }
+        return ResponseEntity.badRequest().build();
     }
 }
 
-//РЕШИТЬ ПРОБЛЕМУ
-
-//КОГДА ПРОСИШЬ LETTERS, ОН МОЖЕТ ПОПЫТАТЬСЯ ВЫДАТЬ ЦИФРЫ И НАОБОРОТ
-
-//МОЖНО ЛИ СДЕЛАТЬ 2 ТАБЛИЦЫ. ОДНА ДЛЯ СТРОК, ДРУГАЯ ДЛЯ ЧИСЕЛ

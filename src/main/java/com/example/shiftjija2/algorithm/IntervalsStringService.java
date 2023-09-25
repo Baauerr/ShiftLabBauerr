@@ -1,6 +1,6 @@
 package com.example.shiftjija2.algorithm;
 
-import com.example.shiftjija2.H2DB.IntervalsString;
+import com.example.shiftjija2.H2DB.TableIntervalsString;
 import com.example.shiftjija2.H2DB.IntervalsStringRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class IntervalsStringService {
             String startValue = intervalValues.get(0);
             String endValue = intervalValues.get(1);
 
-            IntervalsString intervals = new IntervalsString();
+            TableIntervalsString intervals = new TableIntervalsString();
             intervals.setStart(startValue);
             intervals.setEnd(endValue);
 

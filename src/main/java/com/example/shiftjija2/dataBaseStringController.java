@@ -1,7 +1,7 @@
 package com.example.shiftjija2;
 
 
-import com.example.shiftjija2.H2DB.IntervalsString;
+import com.example.shiftjija2.H2DB.TableIntervalsString;
 import com.example.shiftjija2.H2DB.IntervalsStringRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,8 +16,8 @@ public class dataBaseStringController {
     private IntervalsStringRepository intervalsStringRepository;
 
     @RequestMapping("create-string-interval")
-    public IntervalsString createInterval(){
-        return intervalsStringRepository.save(new IntervalsString());
+    public TableIntervalsString createInterval(){
+        return intervalsStringRepository.save(new TableIntervalsString());
     }
 }
 

@@ -1,25 +1,21 @@
 package com.example.shiftjija2.H2DB;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
-@Table(name = "INTERVALSSTRING")
-public class IntervalsString {
+@Table(name = "INTERVALS_INT")
+public class TableIntervalsInt {
     @jakarta.persistence.Id
     @GeneratedValue
     @Column(name = "id", nullable = false)
     private Long Id;
     @Column(name = "start", nullable = false)
-    private String start;
+    private Integer start;
     @Column(name = "`end`", nullable = false)
-    private String end;
+    private Integer end;
 
-    public IntervalsString() {
+    public TableIntervalsInt(){
     }
-
     public Long getId() {
         return Id;
     }
@@ -28,19 +24,21 @@ public class IntervalsString {
         Id = id;
     }
 
-    public String getStart() {
+    public Integer getStart() {
         return start;
     }
 
-    public void setStart(String start) {
+    public void setStart(Integer start) {
         this.start = start;
     }
 
-    public String getEnd() {
+    public Integer getEnd() {
         return end;
     }
 
-    public void setEnd(String end) {
+    public void setEnd(Integer end) {
         this.end = end;
     }
 }
+
+
