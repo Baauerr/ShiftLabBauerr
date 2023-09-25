@@ -1,10 +1,9 @@
 package com.example.shiftjija2.algorithm;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class ArrayConverter {
-    public static ArrayList<ArrayList<String>> convertIntArrayToStringArray(ArrayList<ArrayList<?>> intArray) {
+    public static ArrayList<ArrayList<String>> convertToStringArray(ArrayList<ArrayList<?>> intArray) {
         ArrayList<ArrayList<String>> stringArray = new ArrayList<>();
 
         for (ArrayList<?> innerList : intArray) {

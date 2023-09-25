@@ -1,7 +1,7 @@
 package com.example.shiftjija2;
 
 import com.example.shiftjija2.H2DB.Intervals;
-import com.example.shiftjija2.H2DB.repository.IntervalsRepository;
+import com.example.shiftjija2.H2DB.IntervalsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;

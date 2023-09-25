@@ -1,7 +1,7 @@
 package com.example.shiftjija2.algorithm;
 
 import com.example.shiftjija2.H2DB.Intervals;
-import com.example.shiftjija2.H2DB.repository.IntervalsRepository;
+import com.example.shiftjija2.H2DB.IntervalsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
