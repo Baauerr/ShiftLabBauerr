@@ -1,9 +1,9 @@
-package com.example.shiftjija2.algorithm;
+package com.example.shiftjija2.Algorithm;
 
 import java.util.ArrayList;
 
 public class ArrayConverter {
-    public static ArrayList<ArrayList<Integer>> convertToIntegerArrays(ArrayList<ArrayList<?>> intervalData) {
+    public static ArrayList<ArrayList<Integer>> convertToIntegerArray(ArrayList<ArrayList<?>> intervalData) {
         ArrayList<ArrayList<Integer>> result = new ArrayList<>();
         for (ArrayList<?> subList : intervalData) {
             ArrayList<Integer> intList = new ArrayList<>();
@@ -14,7 +14,7 @@ public class ArrayConverter {
                     try {
                         intList.add(Integer.parseInt((String) element));
                     } catch (NumberFormatException e) {
-                        throw new IllegalArgumentException("Ошибка при преобразовании String в Integer");
+                        throw new IllegalArgumentException("Ошибка при преобразовании String в Integer", e);
                     }
                 }
             }
@@ -23,7 +23,7 @@ public class ArrayConverter {
         return result;
     }
 
-    public static ArrayList<ArrayList<String>> convertToStringArrays(ArrayList<ArrayList<?>> intervalData) {
+    public static ArrayList<ArrayList<String>> convertToStringArray(ArrayList<ArrayList<?>> intervalData) {
         ArrayList<ArrayList<String>> result = new ArrayList<>();
         for (ArrayList<?> subList : intervalData) {
             ArrayList<String> stringList = new ArrayList<>();

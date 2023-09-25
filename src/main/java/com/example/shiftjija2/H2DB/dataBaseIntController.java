@@ -1,7 +1,6 @@
-package com.example.shiftjija2;
+package com.example.shiftjija2.H2DB;
 
-import com.example.shiftjija2.H2DB.TableIntervalsInt;
-import com.example.shiftjija2.H2DB.IntervalsIntRepository;
+import com.example.shiftjija2.IntervalsIntRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +14,7 @@ public class dataBaseIntController {
     private IntervalsIntRepository intervalsIntRepository;
 
     @RequestMapping("create-int-interval")
-    public TableIntervalsInt createInterval() {
-        return intervalsIntRepository.save(new TableIntervalsInt());
+    public IntervalsIntTable createInterval() {
+        return intervalsIntRepository.save(new IntervalsIntTable());
     }
 }

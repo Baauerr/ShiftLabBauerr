@@ -1,13 +1,13 @@
-package com.example.shiftjija2.algorithm;
+package com.example.shiftjija2.Algorithm;
 
-import com.example.shiftjija2.H2DB.TableIntervalsString;
-import com.example.shiftjija2.H2DB.IntervalsStringRepository;
+import com.example.shiftjija2.H2DB.IntervalsStringTable;
+import com.example.shiftjija2.IntervalsStringRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-
+//Добавление значений в string БД
 @Service
 public class IntervalsStringService {
 
@@ -18,12 +18,12 @@ public class IntervalsStringService {
         this.intervalsRepository = intervalsRepository;
     }
 
-    public void saveIntervalsFromArrays(ArrayList<ArrayList<String>> intervalsList) {
+    public void saveIntervalsToDataBase(ArrayList<ArrayList<String>> intervalsList) {
         for (List<String> intervalValues : intervalsList) {
             String startValue = intervalValues.get(0);
             String endValue = intervalValues.get(1);
 
-            TableIntervalsString intervals = new TableIntervalsString();
+            IntervalsStringTable intervals = new IntervalsStringTable();
             intervals.setStart(startValue);
             intervals.setEnd(endValue);
 

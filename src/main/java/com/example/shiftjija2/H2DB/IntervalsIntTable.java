@@ -4,26 +4,21 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "intervals_int")
-public class TableIntervalsInt {
+public class IntervalsIntTable {
     @jakarta.persistence.Id
     @GeneratedValue
-    @Column(name = "ID", nullable = false)
+    @Column(name = "Id", nullable = false)
     private Long Id;
-    @Column(name = "START", nullable = false)
+    @Column(name = "Start", nullable = false)
     private Integer start;
-    @Column(name = "ENDVALUE", nullable = false)
+    @Column(name = "End_value", nullable = false)
     private Integer end;
 
-    public TableIntervalsInt(){
+    public IntervalsIntTable(){
     }
     public Long getId() {
         return Id;
     }
-
-    public void setId(Long id) {
-        Id = id;
-    }
-
     public Integer getStart() {
         return start;
     }

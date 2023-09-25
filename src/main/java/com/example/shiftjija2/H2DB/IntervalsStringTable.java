@@ -7,25 +7,21 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "intervals_string")
-public class TableIntervalsString {
+public class IntervalsStringTable {
     @jakarta.persistence.Id
     @GeneratedValue
     @Column(name = "ID", nullable = false)
     private Long Id;
-    @Column(name = "START", nullable = false)
+    @Column(name = "Start", nullable = false)
     private String start;
-    @Column(name = "ENDVALUE", nullable = false)
+    @Column(name = "End_value", nullable = false)
     private String end;
 
-    public TableIntervalsString() {
+    public IntervalsStringTable() {
     }
 
     public Long getId() {
         return Id;
-    }
-
-    public void setId(Long id) {
-        Id = id;
     }
 
     public String getStart() {
