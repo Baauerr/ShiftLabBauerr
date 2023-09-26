@@ -40,3 +40,4 @@ public class IntervalsStringTable {
         this.end = end;
     }
 }
+
