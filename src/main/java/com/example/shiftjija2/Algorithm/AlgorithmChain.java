@@ -1,4 +1,4 @@
-package com.example.shiftjija2.Controller;
+package com.example.shiftjija2.Algorithm;
 
 import com.example.shiftjija2.Algorithm.IntervalsCombiner;
 import com.example.shiftjija2.Algorithm.Sorter;

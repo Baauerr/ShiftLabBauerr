@@ -1,4 +1,4 @@
-package com.example.shiftjija2.H2DB;
+package com.example.shiftjija2;
 
 import com.example.shiftjija2.IntervalsStringRepository;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 import static com.example.shiftjija2.Algorithm.ArrayConverter.convertToIntegerArray;
 import static com.example.shiftjija2.Algorithm.ArrayConverter.convertToStringArray;
-import static com.example.shiftjija2.Controller.AlgorithmChain.sortAndCombine;
+import static com.example.shiftjija2.Algorithm.AlgorithmChain.sortAndCombine;
 
 
 @RestController
