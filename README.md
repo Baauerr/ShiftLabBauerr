@@ -12,20 +12,20 @@
 
 Вы можете получить доступ к базе данных H2 по следующему адресу: http://localhost:8080/h2-console
 
-JDBC URL: jdbc:h2:mem:testdb
+#### JDBC URL: jdbc:h2:mem:testdb
 
-Стандартный порт: 8080
+#### Стандартный порт: 8080
 
-Логин: shiftDB
-Пароль: 123
+#### Логин: shiftDB
+#### Пароль: 123
 
 ## Настройка базы данных
 
 Откройте файл resources/application.properties
 
-spring.datasource.username=shiftDB - Настройка имени 
-spring.datasource.password=123 - Настройка пароля
-spring.datasource.url=jdbc:h2:mem:testdb - Настройка JDBC URL
+#### spring.datasource.username=shiftDB - Настройка имени 
+#### spring.datasource.password=123 - Настройка пароля
+#### spring.datasource.url=jdbc:h2:mem:testdb - Настройка JDBC URL
 
 ## Описание проекта
 На сервер приходит POST запрос -> Массивы сортируются по первому элементу -> Происходит объединение интервалов (массивов) -> Загрузка в базу данных -> GET запрос на получение минимального элемента
