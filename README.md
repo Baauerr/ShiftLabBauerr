@@ -10,9 +10,7 @@
 
 Были созданы две отдельные таблицы для хранения данных разных типов. intervals_int и intervals_string
 
-Вы можете получить доступ к базе данных H2 по следующему адресу:
-
-http://localhost:8080/h2-console
+Вы можете получить доступ к базе данных H2 по следующему адресу: http://localhost:8080/h2-console
 
 JDBC URL: jdbc:h2:mem:testdb
 
